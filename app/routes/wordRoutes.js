@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const Word = require('../models/wordSchema');
-const WordController = require('../controllers/wordController')(Word);
+const WordController = require('../controllers/wordController');
 
 // Get all Word
 router.get('/word', WordController.GetWord);

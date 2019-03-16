@@ -23,7 +23,7 @@ mongoose.connection.on('Connected', () => {
   console.log(`Mongoose default connection open to ${config.db}`);
 });
 
-app.use('/api/words', words);
+app.use('/api', words);
 
 // Express application will listen to port mentioned in our configuration
 app.listen(config.port, (err) => {
