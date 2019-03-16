@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const words = require('./app/routes/wordRoutes');
 
 const app = express();
 const config = require('./app/config/config');
@@ -21,6 +22,8 @@ mongoose.connect(config.db);
 mongoose.connection.on('Connected', () => {
   console.log(`Mongoose default connection open to ${config.db}`);
 });
+
+app.use('/api/words', words);
 
 // Express application will listen to port mentioned in our configuration
 app.listen(config.port, (err) => {
