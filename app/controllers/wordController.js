@@ -11,6 +11,7 @@ const WordCtrl = {
       res.json({ status: true, word: words });
     });
   },
+
   // Post a word into Database
   PostWord(req, res) {
     const word = new Word(req.body);
@@ -22,6 +23,7 @@ const WordCtrl = {
       res.json({ status: true, message: 'Word Saved!!' });
     });
   },
+
   // Updating a word status based on an ID
   UpdateWord(req, res) {
     const { completed } = req.body;
@@ -35,6 +37,7 @@ const WordCtrl = {
       });
     });
   },
+
   // Deleting a word baed on an ID
   DeleteWord(req, res) {
     Word.remove({ _id: req.params.id }, (err, words) => {
