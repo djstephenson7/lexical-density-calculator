@@ -52,5 +52,3 @@ Word.create(wordObject, (err) => {
   console.log(`Created ${words.length} words`)
   mongoose.connection.close()
 });
-
-console.log(dbName)

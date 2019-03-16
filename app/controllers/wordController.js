@@ -2,7 +2,7 @@ const Word = require('../models/wordSchema');
 
 const WordCtrl = {
   // Get all words from the Database
-  GetWord(req, res) {
+  getWord(req, res) {
     Word.find({}, (err, words) => {
       if (err) {
         res.json({ status: false, error: 'Something went wrong' });
@@ -13,7 +13,7 @@ const WordCtrl = {
   },
 
   // Post a word into Database
-  PostWord(req, res) {
+  postWord(req, res) {
     const word = new Word(req.body);
     word.save((err, word) => {
       if (err) {
@@ -25,7 +25,7 @@ const WordCtrl = {
   },
 
   // Updating a word status based on an ID
-  UpdateWord(req, res) {
+  updateWord(req, res) {
     const { completed } = req.body;
     Word.findById(req.params.id, (err, word) => {
       word.completed = completed;
@@ -39,7 +39,7 @@ const WordCtrl = {
   },
 
   // Deleting a word baed on an ID
-  DeleteWord(req, res) {
+  deleteWord(req, res) {
     Word.remove({ _id: req.params.id }, (err, words) => {
       if (err) {
         res.json({ status: false, error: 'Deleting word is not successfull' });
