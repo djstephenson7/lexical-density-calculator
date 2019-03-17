@@ -56,9 +56,6 @@ DELETE http://localhost:2000/api/words/id
 Update a word:
 PUT http://localhost:2000/api/words/id
 
-## Adding to the database using Postman
-
-
 ## Versioning
 
 1.0.0
