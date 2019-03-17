@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const words = require('./app/routes/wordRoutes');
+const calculator = require('./app/routes/calculatorRoutes')
 
 const app = express();
 const config = require('./app/config/config');
@@ -24,6 +25,7 @@ mongoose.connection.on('Connected', () => {
 });
 
 app.use('/api', words);
+app.use('/api', calculator);
 
 // Express application will listen to port mentioned in our configuration
 app.listen(config.port, (err) => {
