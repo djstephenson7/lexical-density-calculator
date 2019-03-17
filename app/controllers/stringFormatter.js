@@ -10,6 +10,4 @@ function stringFormatter(str) {
   return str.replace(/[.,\/#!£$%\^&\*;:{}=\-_`''~()0-9]/g, '').split(' ');
 }
 
-// stringFormatter('K£im lo!ves go.in!9g to t,,he99 cinema9');
-
 module.exports = stringFormatter;
