@@ -21,6 +21,7 @@
     "method-override": "^3.0.0",
     "mocha": "^6.0.2",
     "morgan": "^1.9.1",
+    "nock": "^10.0.6",
     "nodemon": "^1.18.10",
     "sinon": "^7.2.7",
     "supertest": "^4.0.2"

@@ -7,11 +7,14 @@ const LexicalDensityCalculator = {
     const wordCounter = sentence.length;
     const filter = sentence.filter(word => nonLexicalWords.includes(word));
     const result = Number(1 - filter.length / wordCounter).toFixed(2);
-    console.log(result);
-    console.log(wordCounter);
-
-      res.json({ status: true, sentence: sentence });
+    res.json(
+      {
+        data: {
+          overall_ld: result,
+        },
+      },
+    );
   },
-}
+};
 
 module.exports = LexicalDensityCalculator;
