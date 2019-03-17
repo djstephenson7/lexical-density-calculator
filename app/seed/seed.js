@@ -1,43 +1,8 @@
 const mongoose = require('mongoose');
 const Word = require('../models/wordSchema');
 const config = require('../config/config');
+const nonLexicalWords = require('./nonLexicalWords');
 
-const nonLexicalWords = [
-  'to',
-  'got',
-  'is',
-  'have',
-  'and',
-  'although',
-  'or',
-  'that',
-  'when',
-  'while',
-  'a',
-  'either',
-  'more',
-  'much',
-  'neither',
-  'my',
-  'the',
-  'as',
-  'no',
-  'nor',
-  'not',
-  'at',
-  'between',
-  'in',
-  'of',
-  'without',
-  'I',
-  'you',
-  'he',
-  'she',
-  'it',
-  'we',
-  'they',
-  'anybody',
-];
 
 console.log(config.MONGODB_URI);
 const dbName = config.db;

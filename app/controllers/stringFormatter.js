@@ -7,7 +7,7 @@ function stringFormatter(str) {
   ) {
     return 'Error Input';
   }
-  return str.replace(/[.,\/#!£$%\^&\*;:{}=\-_`~()0-9]/g, '').split(" ");
+  return str.replace(/[.,\/#!£$%\^&\*;:{}=\-_`''~()0-9]/g, '').split(' ');
 }
 
 // stringFormatter('K£im lo!ves go.in!9g to t,,he99 cinema9');
