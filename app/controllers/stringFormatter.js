@@ -4,14 +4,12 @@ function stringFormatter(str) {
     str.length > 1000,
     str.split(/\W+/).length > 100 || str.split(/\W+/).length < 1
   ) {
-    console.log('Error input');
+    return 'Error Input'
   } else {
-    const formatted = str.replace(/[.,\/#!£$%\^&\*;:{}=\-_`~()0-9]/g, '');
-    console.log(formatted);
-    return formatted;
+    return str.replace(/[.,\/#!£$%\^&\*;:{}=\-_`~()0-9]/g, '');
   }
 }
 
-stringFormatter('K£im lo!ves go.in!9g to t,,he99 cinema9');
+// stringFormatter('K£im lo!ves go.in!9g to t,,he99 cinema9');
 
 module.exports = stringFormatter;
