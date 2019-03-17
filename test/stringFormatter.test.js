@@ -2,9 +2,9 @@ const stringFormatter = require('../app/controllers/stringFormatter');
 const hundredWordStory = require('./helpers');
 const thousandPlusCharacters = require('./helpers');
 
-test('Removes numbers and punctuation from string', () => {
+test('Removes numbers & punctuation and formats to array', () => {
   expect(stringFormatter('K£im lo!ves go.in!9g to t,,he99 cinema9'))
-    .toBe('Kim loves going to the cinema');
+    .toEqual(["Kim", "loves", "going", "to", "the", "cinema"]);
 });
 
 test('Error if string word count > 100', () => {
